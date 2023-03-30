@@ -1,0 +1,59 @@
+extends ../pugs/master.pug
+include ../pugs/cardExperience.pug
+
+block styles
+  +link('./css/portfolio.css')
+  title Sobre mi
+  +meta('description', `Portafolio de Eduardo Valdéz A. Desarrollador de software con +${new Date().getFullYear() - 2018} años de experiencia en tecnologías web como Java, Spring framework, Javascript, Oracle DB, Docker, Web servers, etc.`)
+
+block header
+  block meta
+
+block content
+  section.title.row
+    div.col-xs-12.col-md-12.col-lg-5.offset-lg-1
+      p Hola, Soy Eduardo Valdéz A.
+      span Desarrollador de software
+    div.image-profile.col-xs-12.col-md-6.offset-md-3.col-lg-3.offset-lg-1.row
+      div.col-xs-5.col-md-8
+        img(class="img-prof-ed", src='./img/profile.jpg', alt='image profile')
+      div.social-container.col-xs-5.col-md-4
+        a(href='https://github.com/eduardova', target='_blank'): img(src='./img/github.png' alt='Github profile')
+        a(href='https://www.linkedin.com/in/eduardova/', target='_blank'): img(src='./img/linkedin.png' alt='Linkedin profile')
+        a(href='https://twitter.com/eduardova_dev', target='_blank'): img(src='./img/twitter.jpg' alt='Twitter profile')
+  section.about-me.my-5.col-xs-12.row.col-md-12
+    h1.col-12.text-center Sobre mi
+    div.col-xs-12.col-md-5.offset-md-1.my-5
+      h3.text-center Comunicación Efectiva
+      p.text-center.
+        Comprendo que los grandes objetivos se logran en equipo y que para lograrlos, 
+        es necesario una clara y buena comunicación.
+    div.col-xs-12.col-md-5
+      h3.text-center Soluciones Efectivas.
+      p.text-center.
+        Intento estar al actualizado con los lenguajes 
+        y las herramientas para ser más eficiente. 
+        De igual forma entiendo que muchas empresas prefieren estabilidad a innovación frecuente.
+    div.col-xs-12.col-md-5.offset-md-1
+      h3.text-center Tiempo y Habilidad
+      p.text-center.
+        He aprovechado el tiempo desarrollando mis habilidades y ampliando mi conocimiento para beneficiar mi proyecto/equipo/empresa.
+    div.col-xs-12.col-md-5
+      h3.text-center Diseño vs Código
+      p.text-center.
+        Creo que los problemas dificiles se resuelven de forma eficáz y a largo plazo si se tiene un plan premediatado.
+    
+  section.experience
+    h1.text-center Experiencia
+    div.cards.my-5.row
+      +cardExperience('Java', './img/java.jpg', `+${new Date().getFullYear() - 2018} años de experiencia con Java web (spring framework and jakarta) así como herramientas y librerías de uso frecuente (hibernate, maven, docker, servers, lombok, etc)`)
+      +cardExperience('Bases de datos', './img/database.png', `+${new Date().getFullYear() - 2019} años de experiencia con bases de datos SQL (DDL, DML, funciones, vustas, subconsultas, procedimientos almacenados, etc)`)
+      +cardExperience('Javascript', './img/js.png', `+${new Date().getFullYear() - 2019} años de experiencia con vanilla Javascript y los frameworks Vue Js y Angular. Conocimiento básico de Node JS así como herramientas y librerías de uso frecuente`)
+      +cardExperience('HTML/CSS', './img/html.png', `+${new Date().getFullYear() - 2018} años de experiencia con HTML y CSS (CSS3, HTML5, Bootstrap, Materialize, etc)`)
+      +cardExperience('PHP', './img/php.png', `2 años de experiencia con PHP y el framework Laravel (Eloquent ORM, Blade, etc)`)
+      +cardExperience('Herramientas', './img/git.svg', `Un día normal, usualmente utilizo herramientas como: Git, VSCode, cualquier IDE popular de java, Docker, una terminal basada en linux, JShell, Software de diagramas y modelado y muchas oras...`)
+  button(class="btn-lang", type="button", data-current-path='es')
+    img(src="./img/usa.jpg")
+
+block scripts
+  +script('js/portfolio.js', true)
