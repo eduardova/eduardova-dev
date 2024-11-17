@@ -4,14 +4,14 @@ include ../pugs/cardExperience.pug
 block styles
   +link('./css/portfolio.css')
   title Sobre mi
-  +meta('description', `Portafolio de Eduardo Valdéz A. Desarrollador de software con +${new Date().getFullYear() - 2018} años de experiencia en tecnologías web como Java, Spring framework, Javascript, Oracle DB, Docker, Web servers, etc.`)
+  +meta('description', `Portafolio de Eduardo Valdéz A. Desarrollador de software con +${new Date().getFullYear() - 2018} años de experiencia.`)
 
 block header
   block meta
 
 block content
   section.title.row
-    div.col-xs-12.col-md-12.col-lg-5.offset-lg-1
+    div.col-xs-12.col-md-12.col-lg-5.offset-lg-1.mt-4
       p Hola, Soy Eduardo Valdéz A.
       span Desarrollador de software
     div.image-profile.col-xs-12.col-md-6.offset-md-3.col-lg-3.offset-lg-1.row
@@ -46,12 +46,14 @@ block content
   section.experience
     h1.text-center Experiencia
     div.cards.my-5.row
-      +cardExperience('Java', './img/java.jpg', `+${new Date().getFullYear() - 2018} años de experiencia con Java web (spring framework and jakarta) así como herramientas y librerías de uso frecuente (hibernate, maven, docker, servers, lombok, etc)`)
+      +cardExperience('Java', './img/java.jpg', `+${new Date().getFullYear() - 2018} años de experiencia con Java así como herramientas y librerías de uso frecuente (Spring, Jakarta, Gradle, Hibernate, etc)`)
+      +cardExperience('Cloud', './img/cloud.jpg', `+${new Date().getFullYear() - 2022} años de experiencia trabajando en la nube (Docker, Kubernetes, Helm, Grafana, Openshift, AWS, GitLab CI, etc)`)
+      +cardExperience('AWS', './img/awscp.png', `He obtenido el certificado "AWS Cloud Practitioner" en el año 2024 y he trabajado profesionalmente con EC2, Lambda, API GW, S3, etc`)
       +cardExperience('Bases de datos', './img/database.png', `+${new Date().getFullYear() - 2019} años de experiencia con bases de datos SQL (DDL, DML, funciones, vustas, subconsultas, procedimientos almacenados, etc)`)
       +cardExperience('Javascript', './img/js.png', `+${new Date().getFullYear() - 2019} años de experiencia con vanilla Javascript y los frameworks Vue Js y Angular. Conocimiento básico de Node JS así como herramientas y librerías de uso frecuente`)
       +cardExperience('HTML/CSS', './img/html.png', `+${new Date().getFullYear() - 2018} años de experiencia con HTML y CSS (CSS3, HTML5, Bootstrap, Materialize, etc)`)
       +cardExperience('PHP', './img/php.png', `2 años de experiencia con PHP y el framework Laravel (Eloquent ORM, Blade, etc)`)
-      +cardExperience('Herramientas', './img/git.svg', `Un día normal, usualmente utilizo herramientas como: Git, VSCode, cualquier IDE popular de java, Docker, una terminal basada en linux, JShell, Software de diagramas y modelado y muchas oras...`)
+      +cardExperience('Herramientas', './img/git.svg', `Normalmente utilizo herramientas como: Git, cualquier IDE popular de java, Docker, VSCode, una terminal basada en linux, Jira, Software de diagramas, etc...`)
   button(class="btn-lang", type="button", data-current-path='es')
     img(src="./img/usa.jpg")
 
